@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.accordion{
+    display: block;
+    max-width: 840px;
+    margin: auto;
+}
+.accordion__container{
+    display: block;
+    background-color: #ccc;
+    margin: auto;
+
+}
