@@ -1,15 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 * {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
+    font-family: 'Lato', sans-serif;
+	box-sizing: border-box;
 }
-.accordion{
-    display: block;
-    max-width: 840px;
-    margin: auto;
+.accordion {
+	width: 50%;
+	box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	margin: 7em auto;
+	overflow: hidden;
+	background-color: rgb(61, 146, 118);
+    
 }
-.accordion__container{
+.title {
     display: block;
-    background-color: #ccc;
-    margin: auto;
+    text-align: center;
+    color: #fff;
+    margin: 0.5em 0;
+}
+/* .accordion:hover .accordion__label:hover .accordion__content:hover{
+    height: 7em;
+} */
+
+.mems-img {
+	max-width: 100%;
+}
+
+.accordion__label,
+.accordion__content {
+	padding: 14px 20px;
+    border-bottom: 0.05em solid rgba(0,0,0,0.3);
+
+}
+.accordion__content {
+	padding: 14px 20px;
+	background-color: #fff;
+	line-height: 1.2;
+	font-size: 1em;
+    
+	display: none;
+}
+.accordion__label {
+	display: block;
+	color: #fff;
+	cursor: pointer;
+	position: relative;
+	transition: background 0.1s ease;
+}
+.accordion__label:hover {
+	background: rgba(0, 0, 0, 0.1);
+	color: #000;
+    font-size: 1.5em;
+}
+
+.accordion__label::after {
+	content: '+';
+	position: absolute;
+	top: 50%;
+	right: 1.2em;
+	font-weight: 700;
+	transform: translateY(-50%);
+	transition: transform 0.3s;
+}
+
+.accordion__input[type = 'radio'] {
+	display: none;
+}
+.accordion__input:hover ~ .accordion__content {
+	display: block;
+}
+.accordion__input:hover ~ .accordion__label::after {
+	transform: translateY(-50%) rotate(0.125turn);
 
 }
