@@ -29,7 +29,6 @@
 	font-size: 1em;
 	opacity: 0;
 }
-
 .memes-img {
 	max-width: 100%;
 	margin: 1em auto;
@@ -101,11 +100,12 @@
 }
 @media screen and (min-width: 820px) and (max-width: 1920px) {
 	.accordion__memes-text {
-		font-size: 1.2em;
+		font-size: 1.4em;
 	}
 }
-@media screen and (min-width: 1920px) {
-	.accordion__content {
-		font-size: 1.6em;
+@media  (min-width: 1920px) and (hover: hover) {
+	
+    .accordion__memes-text {
+		font-size: 2em;
 	}
 }
