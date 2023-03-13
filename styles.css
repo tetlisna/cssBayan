@@ -11,11 +11,9 @@
 	border-radius: 0.5em;
 	margin: 2em auto;
 	overflow: hidden;
-	background-color: rgb(61, 146, 118);
+	background-color: rgba(61, 146, 118, 0.8);
 }
-.accordion:hover {
-	cursor: pointer;
-}
+
 .accordion:hover .icon {
 	opacity: 1;
 }
@@ -35,7 +33,7 @@
 	display: block;
 }
 .memes-img:hover {
-	filter: opacity(0.5);
+    box-shadow: rgba(255, 255, 255, 0.5) 0.3em 0.3em 0.3em;
 }
 
 .accordion__memes-text {
@@ -81,11 +79,14 @@
 	max-height: 50em;
 	transform: scaleY(1);
 	transition: all 1.5s;
+    cursor: pointer;
 }
 .accordion__content:active {
 	opacity: 0.5;
 }
-
+.accordion__memes-text:active{
+    color: rgba(40, 54, 25, 0.8);
+}
 .accordion__input:hover ~ .accordion__memes-text:hover .icon {
 	transform: rotate(-45deg);
 }
