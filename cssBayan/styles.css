@@ -51,12 +51,12 @@
 	align-items: center;
 }
 
-.accordion__memes-text:checked {
+.accordion__memes-text:active {
 	background: rgba(0, 0, 0, 0.1);
 	color: #000;
 }
 
-.accordion__memes-text:checked .icon {
+.accordion__memes-text:active .icon {
 	transition: transform 0.3s;
 	transform: rotate(-45deg);
 }
@@ -76,9 +76,6 @@
 .accordion__input:checked ~ .accordion__content {
 	max-height: 50em;
 	transition: all 1.5s;
-}
-
-.accordion > div:checked .accordion__content {
 	max-height: 50em;
 	transform: scaleY(1);
 	transition: all 1.5s;
@@ -92,8 +89,12 @@
 .accordion__memes-text:active {
 	color: rgba(40, 54, 25, 0.8);
 }
-
-.accordion__input:checked ~ .accordion__memes-text:checked .icon {
+.accordion__memes-text:active .icon {
+	transform: rotate(-45deg);
+	color: #000;
+}
+.accordion__input:checked ~ .accordion__memes-text .icon{
+	color: #000;
 	transform: rotate(-45deg);
 }
 
